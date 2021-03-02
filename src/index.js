@@ -1,17 +1,19 @@
+// Importando o React
 import React from 'react';
+// Importando o React Dom para injetar o <APP /> na tag <div id="root"></div> do index.html
 import ReactDOM from 'react-dom';
-import './index.css';
+// Importando o componenet APP
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+// Importando a nossa Lib de rotas
+import { BrowserRouter } from 'react-router-dom';
+// Importando o css
+import './index.css';
 
+// Renderizando o component APP (com seus sub componenets e etc) em <div id="root"></div> do index.html
+// Obs: Colocamos o <BrowserRouter> envolta de <App /> para que as rotas fiquem disponíveis no nosso APP todo
 ReactDOM.render(
-  <React.StrictMode>
+  <BrowserRouter>
     <App />
-  </React.StrictMode>,
+  </BrowserRouter>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
